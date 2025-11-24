@@ -41,6 +41,9 @@ class PersonViewModel : ViewModel() {
         // Add your validation logic here.
         // For example, check if the fields are not empty.
         if (rut.isNotBlank() && nombre.isNotBlank() && edad.isNotBlank()) {
+            val nuevaPersona = Persona(rut = rut, nombre = nombre, edad = edad.toInt())
+            personas = personas + nuevaPersona
+            limpiarCampos()
             // Here you would typically save the data to a database or repository.
             // If the operation is successful:
             return true

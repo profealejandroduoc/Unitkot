@@ -64,7 +64,7 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
-    val nav_version = "2.9.6"
+    //val nav_version = "2.9.6"
 
     // Jetpack Compose integration
     implementation(libs.androidx.navigation.compose)

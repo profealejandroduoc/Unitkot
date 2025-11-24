@@ -28,11 +28,15 @@ fun AppNavGraph(navController: NavHostController, personViewModel: PersonViewMod
         composable(Destinos.Registro.ruta) {
             RegisterScreen(
                 viewModel = personViewModel,
-                onRegistroExitoso = { navController.navigate(Destinos.Listado.ruta) }
+                onRegistroExitoso = { navController.navigate(Destinos.Listado.ruta) },
+                onNavigateBack = { navController.popBackStack() }
             )
         }
         composable(Destinos.Listado.ruta) {
-            ListScreen(viewModel = personViewModel)
+            ListScreen(
+                viewModel = personViewModel,
+                onNavigateBack = { navController.popBackStack() }
+            )
         }
     }
 }

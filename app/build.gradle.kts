@@ -40,6 +40,10 @@ android {
     buildFeatures {
         compose = true
     }
+
+//    composeOptions {
+//        kotlinCompilerExtensionVersion = "1.5.15"
+//    }
 }
 
 dependencies {
@@ -77,4 +81,9 @@ dependencies {
 
     // JSON serialization library, works with the Kotlin serialization plugin
     implementation(libs.kotlinx.serialization.json)
+
+    //Material Icons
+    implementation(libs.androidx.compose.material)
+    implementation(libs.androidx.compose.material.icons.extended.android) // Or the latest version
+
 }
